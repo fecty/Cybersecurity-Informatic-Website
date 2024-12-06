@@ -1,0 +1,78 @@
+/*lightmode colors*/
+:root {
+  --bg: white;
+  --bg2: white;
+  --text: black;
+  --emphasis: black;
+  --special: red;
+}
+
+/* darkmode colors */
+/* :root {
+  --bg: #2f3e46;
+  --bg2: #84a98c;
+  --text: #cad2c5;
+  --emphasis: white;
+  --special: red;
+} */
+
+*,
+*::after,
+*::before {
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Apply general color on text and background tags */
+:is(h1, h2, h3, h4, h5, h6, p) {
+  color: var(--text);
+}
+html {
+  scroll-snap-type: y mandatory;
+}
+body {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.card {
+  scroll-snap-align: center;
+
+  border: 2px black solid;
+  width: 90vw;
+
+  min-height: 98vh;
+  width: 98vw;
+  border-radius: 1rem;
+  display: flex;
+  background-color: var(--bg2);
+  flex-direction: column;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.card * {
+  margin: 10px 0px;
+}
+
+.card a {
+  align-self: center;
+  border: 2px black solid;
+  width: 200px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 2rem;
+  border-radius: 1rem;
+  color: var(--emphasis);
+  background-color:var(--bg)
+}
