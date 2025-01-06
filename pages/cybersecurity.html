@@ -1,8 +1,9 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page | CyberAware</title>
+
     <!-- Font Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,10 +12,240 @@
       rel="stylesheet"
     />
     <!-- User Styles -->
-    <link rel="stylesheet" href="base_style.css" />
-</head>
-<body>
-    <h1>Page 2</h1>
-    <a href="../index.html">Return Home</a>
-</body>
+    <link rel="stylesheet" href="/styles/base_style.css" />
+    <link rel="stylesheet" href="/styles/scrollbar_styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>CyberAware</h1>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html" id="link1" class="links">Home</a></li>
+          <li>
+            <a href="/pages/cybersecurity.html" id="cybersecuirtyPage" class="links"
+              >Cybersecurity</a
+            >
+          </li>
+          <li>
+            <a href="/pages/onlinefraud.html" id="onlinefraudPage" class="links"
+              >Online Fraud</a
+            >
+          </li>
+          <li>
+            <a href="/pages/safetytskills.html" id="safetyskillsPage" class="links"
+              >Safety Skills</a
+            >
+          </li>
+          <li>
+            <a href="/pages/quizzes.html" id="quizzesPage" class="links"
+              >Cybersecurity Quiz</a
+            >
+          </li>
+          <li>
+            <a href="/pages/information.html" id="informationPage" class="links"
+              >Website Details</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="cybersecurity">
+        <article>
+          <h1>Cybersecurity</h1>
+          <p>
+            Cybersecurity encompasses the methods, practices, and technologies
+            used to protect computer systems, networks, and data from
+            unauthorized access or damage. It is an essential component of the
+            modern digital age, where information is a critical asset.
+            Cybersecurity not only safeguards personal information but also
+            ensures the reliability of services and the resilience of
+            organizations against potential threats. With the proliferation of
+            internet-connected devices and the rise of sophisticated
+            cyberattacks, cybersecurity has become a vital concern for
+            individuals, businesses, and governments worldwide.
+          </p>
+        </article>
+        <article>
+          <h2>Importance of Cybersecurity</h2>
+          <p>
+            The increasing dependency on digital platforms for communication,
+            commerce, healthcare, and governance has made cybersecurity
+            indispensable. Breaches in security can lead to financial losses,
+            reputational damage, and, in severe cases, even jeopardize national
+            security. Protecting data integrity and privacy is not just a legal
+            requirement but a trust factor between organizations and their
+            stakeholders. Effective cybersecurity also fosters innovation by
+            providing a safe digital environment for users and developers.
+          </p>
+        </article>
+        <article>
+          <h2>Core Aspects of Cybersecurity</h2>
+          <h3>Confidentiality</h3>
+          <p>
+            Confidentiality ensures that sensitive information is accessible
+            only to authorized individuals. Measures like encryption, secure
+            passwords, and access controls help maintain confidentiality,
+            preventing data breaches or leaks.
+          </p>
+          <h3>Integrity</h3>
+          <p>
+            Integrity guarantees that data remains accurate and unaltered during
+            storage or transit. Techniques like hashing, checksums, and secure
+            databases are implemented to detect and prevent unauthorized
+            changes.
+          </p>
+          <h3>Availability</h3>
+          <p>
+            Availability focuses on ensuring that systems and data are
+            accessible to authorized users when needed. This involves
+            implementing redundancy, failover systems, and protection against
+            Distributed Denial of Service (DDoS) attacks.
+          </p>
+          <h3>Authentication and Authorization</h3>
+          <p>
+            Authentication verifies the identity of users, while authorization
+            determines their access privileges. These mechanisms, such as
+            biometric verification and multi-factor authentication (MFA), are
+            critical in preventing unauthorized access.
+          </p>
+          <h3>Risk Management</h3>
+          <p>
+            Risk management involves identifying, assessing, and mitigating
+            risks to digital assets. It includes understanding potential
+            threats, vulnerabilities, and the impact of breaches, followed by
+            implementing countermeasures.
+          </p>
+        </article>
+        <article>
+          <h2>Cybersecurity Threats</h2>
+          <p>
+            Cyber threats evolve constantly, exploiting new vulnerabilities and
+            weaknesses. Common threats include malware, ransomware, phishing,
+            insider threats, and advanced persistent threats (APTs).
+            Cybercriminals leverage artificial intelligence (AI) and machine
+            learning (ML) to enhance their attacks, making them harder to detect
+            and mitigate. Threats also extend to emerging technologies like the
+            Internet of Things (IoT), which introduces new attack vectors due to
+            the lack of standardized security protocols.
+          </p>
+        </article>
+        <article>
+          <h2>Cybersecurity Technologies and Tools</h2>
+          <h3>Firewalls</h3>
+          <p>
+            Firewalls act as barriers between trusted internal networks and
+            untrusted external networks, monitoring and controlling incoming and
+            outgoing traffic.
+          </p>
+          <h3>Intrusion Detection and Prevention Systems (IDPS)</h3>
+          <p>
+            These systems identify and respond to malicious activities in
+            real-time, preventing unauthorized access and data breaches.
+          </p>
+          <h3>Encryption</h3>
+          <p>
+            Encryption converts sensitive data into unreadable formats to
+            protect it during storage and transmission.
+          </p>
+          <h3>Antivirus and Anti-Malware Software</h3>
+          <p>
+            These tools detect and remove malicious software, safeguarding
+            systems from various forms of malware.
+          </p>
+          <h3>Endpoint Protection</h3>
+          <p>
+            Endpoint protection secures devices like laptops, smartphones, and
+            desktops from threats, ensuring comprehensive security across all
+            access points.
+          </p>
+        </article>
+        <article>
+          <h2>Cybersecurity for Organizations</h2>
+          <p>
+            Organizations adopt cybersecurity frameworks like ISO 27001, NIST
+            Cybersecurity Framework, and COBIT to standardize their security
+            practices. Security Information and Event Management (SIEM) systems
+            are widely used to collect, analyze, and manage security data.
+            Companies also invest in employee training and penetration testing
+            to identify vulnerabilities proactively. With regulations such as
+            GDPR, CCPA, and HIPAA, organizations must comply with legal
+            requirements for data protection and privacy.
+          </p>
+        </article>
+        <article>
+          <h2>Challenges in Cybersecurity</h2>
+          <p>
+            Despite advancements, cybersecurity faces challenges such as skill
+            shortages, the complexity of securing vast networks, and adapting to
+            rapidly changing threats. Insider threats, whether intentional or
+            accidental, complicate defense mechanisms. Budget constraints and
+            the cost of implementing robust security measures often hinder
+            smaller organizations from achieving optimal protection.
+            Furthermore, the global nature of cybercrime creates jurisdictional
+            challenges, making prosecution difficult.
+          </p>
+        </article>
+        <article>
+          <h2>Cybersecurity for Individuals</h2>
+          <p>
+            For individuals, cybersecurity starts with adopting good practices
+            like creating strong passwords, updating software regularly, and
+            avoiding suspicious links. Personal devices should be equipped with
+            firewalls, antivirus programs, and encryption tools. Awareness about
+            phishing, social engineering, and other common scams is crucial.
+            Individuals should also monitor their online presence and restrict
+            the amount of personal information shared on social media.
+          </p>
+        </article>
+        <article>
+          <h2>Future of Cybersecurity</h2>
+          <p>
+            The future of cybersecurity will be heavily influenced by
+            advancements in AI, quantum computing, and blockchain. AI-driven
+            tools will enhance threat detection and response capabilities, while
+            blockchain will provide decentralized and secure solutions for data
+            management. Quantum computing, however, poses both opportunities and
+            challenges, as it could potentially break traditional encryption
+            methods. The integration of cybersecurity into every aspect of
+            technology development will be paramount to creating a secure
+            digital ecosystem.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="column1">
+          <h1>Sitemap</h1>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#cybersecurity">Cybersecurity</a></li>
+            <li><a href="/pages/onlinefraud.html">Online Fraud</a></li>
+            <li><a href="/pages/safetytskills.html">Safety Skills</a></li>
+            <li><a href="/pages/quizzes.html">Cybersecurity Quiz</a></li>
+            <li><a href="/pages/information.html">Website Information</a></li>
+          </ul>
+        </div>
+        <div class="column2">
+          <h1>Contact Us</h1>
+          <div class="contacts">
+            <div class="emailBlock">
+              <h2>Email Adress</h2>
+              <a href="mailto:gurmilapsingh@cyberaware.com"
+                >gurmilapsingh@cyberaware.com</a
+              >
+            </div>
+            <div class="numberBlock">
+              <h2>Ph. No.</h2>
+              <a href="tel:+44 1234512345">+44 1234512345</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1>Copyright © 2024 CyberAware, Inc. All Rights Reserved.</h1>
+    </footer>
+  </body>
 </html>

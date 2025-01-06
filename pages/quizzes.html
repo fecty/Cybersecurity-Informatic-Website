@@ -1,0 +1,157 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz | CyberAware</title>
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Nastaliq+Urdu:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- User Styles -->
+    <link rel="stylesheet" href="/styles/base_style.css" />
+    <link rel="stylesheet" href="/styles/scrollbar_styles.css" />
+
+    
+  </head>
+  <body>
+    <header>
+      <h1>CyberAware</h1>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html" id="link1" class="links">Home</a></li>
+          <li>
+            <a href="/pages/cybersecurity.html" id="cybersecuirtyPage" class="links"
+              >Cybersecurity</a
+            >
+          </li>
+          <li>
+            <a href="/pages/onlinefraud.html" id="onlinefraudPage" class="links"
+              >Online Fraud</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pages/safetytskills.html"
+              id="safetyskillsPage"
+              class="links"
+              >Safety Skills</a
+            >
+          </li>
+          <li>
+            <a href="/pages/quizzes.html" id="quizzesPage" class="links"
+              >Cybersecurity Quiz</a
+            >
+          </li>
+          <li>
+            <a href="/pages/information.html" id="informationPage" class="links"
+              >Website Details</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <div class="quiz-container">
+            <h1>Cybersecurity Quiz</h1>
+            <form id="quiz-form">
+                <div class="question">
+                    <h3>1. What does MFA stand for?</h3>
+                    <ul class="options">
+                        <li><input type="radio" name="q1" value="a"> Multi-Factor Authentication</li>
+                        <li><input type="radio" name="q1" value="b"> Multiple File Access</li>
+                        <li><input type="radio" name="q1" value="c"> Multi-Factor Authorization</li>
+                    </ul>
+                </div>
+                <div class="question">
+                    <h3>2. Which of the following is a common online fraud tactic?</h3>
+                    <ul class="options">
+                        <li><input type="radio" name="q2" value="a"> Phishing</li>
+                        <li><input type="radio" name="q2" value="b"> Hashing</li>
+                        <li><input type="radio" name="q2" value="c"> Encryption</li>
+                    </ul>
+                </div>
+                <div class="question">
+                    <h3>3. What should you look for in a URL to ensure secure communication?</h3>
+                    <ul class="options">
+                        <li><input type="radio" name="q3" value="a"> "http"</li>
+                        <li><input type="radio" name="q3" value="b"> "https"</li>
+                        <li><input type="radio" name="q3" value="c"> "ftp"</li>
+                    </ul>
+                </div>
+                <div class="question">
+                    <h3>4. How can you protect yourself on public Wi-Fi?</h3>
+                    <ul class="options">
+                        <li><input type="radio" name="q4" value="a"> Use a VPN</li>
+                        <li><input type="radio" name="q4" value="b"> Connect without a password</li>
+                        <li><input type="radio" name="q4" value="c"> Disable your firewall</li>
+                    </ul>
+                </div>
+                <button type="button" onclick="checkAnswers()">Submit</button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="column1">
+          <h1>Sitemap</h1>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/cybersecurity.html">Cybersecurity</a></li>
+            <li><a href="/pages/onlinefraud.html">Online Fraud</a></li>
+            <li><a href="/pages/safetytskills.html">Safety Skills</a></li>
+            <li><a href="/pages/quizzes.html">Cybersecurity Quiz</a></li>
+            <li><a href="/pages/information.html">Website Information</a></li>
+          </ul>
+        </div>
+        <div class="column2">
+          <h1>Contact Us</h1>
+          <div class="contacts">
+            <div class="emailBlock">
+              <h2>Email Adress</h2>
+              <a href="mailto:gurmilapsingh@cyberaware.com"
+                >gurmilapsingh@cyberaware.com</a
+              >
+            </div>
+            <div class="numberBlock">
+              <h2>Ph. No.</h2>
+              <a href="tel:+44 1234512345">+44 1234512345</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1>Copyright © 2024 CyberAware Inc. All Rights Reserved.</h1>
+    </footer>
+    <script>
+      function checkAnswers() {
+        const answers = {
+          q1: "a",
+          q2: "a",
+          q3: "b",
+          q4: "a",
+        };
+
+        const form = document.getElementById("quiz-form");
+        const resultDiv = document.getElementById("result");
+        let score = 0;
+
+        for (const [key, value] of Object.entries(answers)) {
+          const selected = form.querySelector(`input[name="${key}"]:checked`);
+          if (selected && selected.value === value) {
+            score++;
+          }
+        }
+
+        resultDiv.innerHTML = `You scored ${score} out of ${
+          Object.keys(answers).length
+        }`;
+        resultDiv.style.color =
+          score === Object.keys(answers).length ? "green" : "red";
+      }
+    </script>
+  </body>
+</html>

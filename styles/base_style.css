@@ -1,0 +1,230 @@
+*,
+*::after,
+*::before {
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Variables */
+  --marginSize: 10px;
+
+  /* Color Schemes */
+
+  --main: rgb(238, 238, 238);
+  --secondary: rgb(34, 40, 49);
+  --accent: rgb(57, 62, 70);
+  --special: rgb(0, 173, 181);
+
+  --scheme1: rgb(249, 247, 247);
+  --scheme2: rgb(219, 226, 239);
+  --scheme3: rgb(63, 114, 175);
+  --scheme4: rgb(17, 45, 78);
+}
+
+/* Body CSS START */
+body {
+  background-color: var(--main);
+  color: var(--accent);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* Body CSS END */
+
+/* Header CSS START */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--scheme3);
+  color: var(--scheme4);
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+header h1 {
+  font-size: clamp(1.5rem, 7vmin, 9rem);
+  margin: var(--marginSize);
+  width: 100%;
+}
+.navbar {
+  width: 100%;
+}
+header ul {
+  display: flex;
+  list-style-type: none;
+  gap: var(--marginSize);
+  width: 100%;
+  justify-content: space-evenly;
+}
+@media only screen and (max-width: 700px) {
+  header ul {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Header CSS End */
+
+/* Main Styles Start */
+main {
+  padding: 0 10vmin;
+  padding: 0 10%;
+  padding: 0 clamp(5px, 5vmin, 10%);
+  flex-grow: 1;
+}
+/* Main Styles End */
+
+/* General Styles Start */
+h1 {
+  font-size: clamp(1.5rem, 5vmin, 6rem);
+  margin: var(--marginSize);
+}
+h2 {
+  font-size: clamp(1.2rem, 4vmin, 3rem);
+  margin: var(--marginSize);
+}
+
+h3 {
+  margin: var(--marginSize);
+  font-size: clamp(1.1rem, 3vmin, 2.5rem);
+}
+p {
+  margin: var(--marginSize);
+  font-size: clamp(1rem, 2.3vmin, 2rem);
+}
+
+a {
+  margin: var(--marginSize);
+  font-size: clamp(1rem, 3vmin, 3rem);
+  text-decoration: none;
+  padding: 3px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: var(--main);
+  white-space: nowrap;
+  transition: color 0.1s, font-weight 0.1s, border 0.1s, background-color .2s, box-shadow .2s;
+}
+
+a:hover, a:active, a:focus {
+  /* color: var(--special); */
+  /* font-weight: bold; */
+  box-shadow: 0px 0px 10px var(--scheme4);
+  background-color: var(--scheme4);
+  /* border: 3px solid var(--special); */
+}
+/* General Styles END */
+
+/* Footer Start */
+footer {
+  background-color: var(--scheme3);
+  color: var(--scheme4);
+  position: sticky;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+  max-height: 100%;
+  flex-grow: 1;
+}
+footer > h1 {
+  text-align: center;
+  margin-bottom: 0;
+  background-color: var(--scheme4);
+  color: var(--scheme3);
+  margin: 0;
+  font-size: clamp(0.8rem, 2vmin, 1.2rem);
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.footer h1 {
+  font-size: clamp(1.5rem, 3vmin, 2rem);
+  margin: calc(var(--marginSize) / 2) var(--marginSize);
+}
+.footer h2 {
+  margin: calc(var(--marginSize) / 2) var(--marginSize);
+  font-size: clamp(1.1rem, 2vmin, 1.7rem);
+}
+.footer :is(a, p) {
+  font-size: clamp(0.8rem, 2vmin, 1.2rem);
+  font-weight: 600;
+  padding: 4px;
+}
+
+.footer div {
+  /* border: 3px white solid; */
+  flex-grow: 1;
+  margin: var(--marginSize);
+  margin-top: 0;
+}
+.footer > div > h1 {
+  text-align: center;
+}
+
+.column1,
+.column2 {
+  display: flex;
+  flex-direction: column;
+}
+.column2 > .contacts {
+  display: flex;
+}
+@media only screen and (max-width: 700px) {
+  footer ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contacts {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer {
+    flex-direction: column;
+  }
+}
+
+/* Footer End */
+
+.separator {
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 95%;
+  border-radius: 2rem;
+  margin: 20px auto;
+}
+
+/* Video Segment Styles */
+
+.videoSegment > p {
+  /* float: justify; */
+}
+.videoSegment .frame {
+  box-shadow: 0px 0px 10px black;
+  /* border: 10px var(--scheme4) solid; */
+  border-radius: 10px;
+  aspect-ratio: 16/9;
+  shape-outside: margin-box;
+  float: right;
+}
+@media only screen and (max-width: 700px) {
+  .videoSegment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .videoSegment > .frame {
+    max-width: 90%;
+    margin: var(--marginSize);
+  }
+}
